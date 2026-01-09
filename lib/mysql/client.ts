@@ -13,11 +13,11 @@ export function resetPool() {
 export function getPool(): mysql.Pool {
   if (!pool) {
     const config = {
-      host: process.env.MYSQL_HOST || "localhost",
-      port: parseInt(process.env.MYSQL_PORT || "3307"), // XAMPP default: 3307
+      host: process.env.MYSQL_HOST || "mysql.railway.internal",
+      port: parseInt(process.env.MYSQL_PORT || "3306"), // XAMPP default: 3307
       user: process.env.MYSQL_USER || "root",
-      password: process.env.MYSQL_PASSWORD || "",
-      database: process.env.MYSQL_DATABASE || "kriminal",
+      password: process.env.MYSQL_PASSWORD || "rvzvnDXgAdGpoCyJGHqHsCjYDwUnOFBk",
+      database: process.env.MYSQL_DATABASE || "railway",
       waitForConnections: true,
       connectionLimit: 10,
       queueLimit: 0,
